@@ -1,0 +1,116 @@
+Create table tblProducts(ID int Identity(1,1) Primary Key,
+Name VARCHAR(100), Image VARCHAR(100),ActualPrice Decimal(18,2),
+DIscountedPrice Decimal(18,2));
+
+select * from tblProducts;
+
+
+INSERT INTO tblProducts(Name,Image,ActualPrice,DiscountedPrice)
+VALUES('Pedigree PRO Expert Nutrition, Adult Small Breed Dogs ,Dry Food, 3kg','1.webp',1200.00,1050.00);
+INSERT INTO tblProducts(Name,Image,ActualPrice,DiscountedPrice)
+VALUES('Brunos wild essentials dry dog food, 10 Kg','2.webp',6999.00,5999.00);
+INSERT INTO tblProducts(Name,Image,ActualPrice,DiscountedPrice)
+VALUES('Trixie Premium Black Collar for Large Dog','3.webp',495.00,399.00);
+INSERT INTO tblProducts(Name,Image,ActualPrice,DiscountedPrice)
+VALUES('Trixie Premium Black Leash for Large Dog','4.webp',1125.00,1000.00);
+INSERT INTO tblProducts(Name,Image,ActualPrice,DiscountedPrice)
+VALUES('Pawpourri Multicolour Rectangle Cushion Bed for Larger Sized Dogs','5.webp',1499.00,1299.00);
+INSERT INTO tblProducts(Name,Image,ActualPrice,DiscountedPrice)
+VALUES ('RUSE Buttoned Dinner Jacket for Dogs','6.webp',2000.00,1899.00);
+INSERT INTO tblProducts(Name,Image,ActualPrice,DiscountedPrice)
+VALUES ('Pawpourri Printed Teal Blue Stainless Steel Feeding Bowl For Dogs & Cats','7.webp',349.00,249.00);
+INSERT INTO tblProducts(Name,Image,ActualPrice,DiscountedPrice)
+VALUES ('Grey Color Super Soft Cozy Bed for Dog/Cat Small','8.webp',1900.00,1500.00);
+INSERT INTO tblProducts(Name,Image,ActualPrice,DiscountedPrice)
+VALUES ('Pedigree Puppy Chicken and Milk Dog Food 2.8 Kg','9.webp',580.00,500.00);
+INSERT INTO tblProducts(Name,Image,ActualPrice,DiscountedPrice)
+VALUES ('Chip Chops Dental Roll Peanut Butter Wrapped with Real Chicken Dental Dog Treat 80 gm','10.webp',250.00,245.00);
+INSERT INTO tblProducts(Name,Image,ActualPrice,DiscountedPrice)
+VALUES ('Black Color Woof White Ribbon Printed Dog Hoodie for Dog Size 28','11.webp',1100.00,1050.00);
+INSERT INTO tblProducts(Name,Image,ActualPrice,DiscountedPrice)
+VALUES ('HIMALAYA Erina Ep Powder 150 Gm','12.webp',250.00,220.00);
+INSERT INTO tblProducts(Name,Image,ActualPrice,DiscountedPrice)
+VALUES ('avavet Kiwof Dewormer for Dogs 10 Tablets','13.webp',530.00,500.00);
+INSERT INTO tblProducts(Name,Image,ActualPrice,DiscountedPrice)
+VALUES ('Trixie Plastic Dog Muzzle Terrier Black Size S','14.webp',400.00,375.00);
+INSERT INTO tblProducts(Name,Image,ActualPrice,DiscountedPrice)
+VALUES ('Trixie Clicker-Whistle For Dogs','15.webp',400.00,345.00);
+INSERT INTO tblProducts(Name,Image,ActualPrice,DiscountedPrice)
+VALUES ('IATA Approved Fibre Flight Dog Crate 48 Inch for Large Dog','16.webp',45000.00,36000.00);
+INSERT INTO tblProducts(Name,Image,ActualPrice,DiscountedPrice)
+VALUES ('Petsnugs Green Reindeer Sweater For Dogs and Cats (XS)','17.webp',1200.00,1099.00);
+INSERT INTO tblProducts(Name,Image,ActualPrice,DiscountedPrice)
+VALUES ('The Good Paws FRESSSSH AF Short Coat Shampoo 250 ml','18.webp',550.00,600.00);
+INSERT INTO tblProducts(Name,Image,ActualPrice,DiscountedPrice)
+VALUES ('Trixie Microfibre Towel Grey For Dogs and Cats (50 x 60 cm)','19.webp',675.00,600.00);
+INSERT INTO tblProducts(Name,Image,ActualPrice,DiscountedPrice)
+VALUES ('LetsShave EZ-WIZZY Pet Trimmer for Dogs & Cats','20.webp',2999.00,2599.00);
+---------------------------------------------------
+
+create table RegistrationPage(
+CustomerID INT IDENTITY(1,1)PRIMARY KEY ,
+CustomerName VARCHAR(100) UNIQUE,
+PhoneNo VARCHAR(100),
+Address VARCHAR(100),
+PetName VARCHAR(255) NOT NULL,
+PetGender VARCHAR(10) NOT NULL,
+Breed VARCHAR(50) NOT NULL,
+Age VARCHAR(5) NOT NULL,    ------->here PetAge is changed to Age
+health_status VARCHAR(20) NOT NULL,
+description TEXT,
+Password VARCHAR(50),
+IsActive INT
+)
+
+
+
+
+CREATE PROCEDURE page_Registration
+    @CustomerName VARCHAR(100),
+    @PhoneNo VARCHAR(100),
+    @Address VARCHAR(100),
+    @PetName VARCHAR(255),
+    @PetGender VARCHAR(10),
+    @Breed VARCHAR(50),
+    @Age VARCHAR(5),
+    @health_status VARCHAR(20),
+    @description TEXT,
+	@Password VARCHAR(50),
+    @IsActive INT
+AS
+BEGIN
+    INSERT INTO RegistrationPage (CustomerName, PhoneNo, Address, PetName, PetGender, Breed, Age, health_status, description, Password, IsActive)
+    VALUES (@CustomerName, @PhoneNo, @Address, @PetName, @PetGender, @Breed, @Age, @health_status, @description, @Password, @IsActive);
+END;
+
+
+
+
+CREATE PROCEDURE LoginPage(@CustomerName VARCHAR(100),@Password VARCHAR(100))
+AS
+BEGIN
+	SELECT * FROM RegistrationPage WHERE CustomerName=@CustomerName AND Password=@Password;
+END
+
+
+-- Example: Update your stored procedure to fetch PetGender and Breed
+CREATE PROCEDURE Page_Login
+    @CustomerName NVARCHAR(255),
+    @Password NVARCHAR(255)
+AS
+BEGIN
+    SELECT 
+        CustomerName,
+        PhoneNo,
+        Address,
+        PetName,
+        PetGender,
+        Breed,
+        Age,   
+        health_status,
+        description,
+        IsActive
+
+    FROM RegistrationPage
+    WHERE CustomerName = @CustomerName AND Password = @Password;
+END
