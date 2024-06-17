@@ -1,0 +1,28 @@
+.faq {
+    font-family: Arial, sans-serif;
+    width: 700px; /* Set the width of the FAQ box */ /* Add a border for visual clarity */
+    padding: 20px; /* Add padding inside the box */
+    margin: 0 auto; /* Center the box horizontally */
+    /* background-color:rgb(209, 222, 135); */
+  }
+  
+  .faq-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  .question {
+    color:darkred;
+    cursor: pointer;
+  }
+  
+  .answer {
+    color:darkmagenta;
+    display: none;
+  }
+  
+  .expanded {
+    display: block;
+  }
+  

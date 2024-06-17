@@ -1,0 +1,335 @@
+
+
+.blog-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+  
+  .blog-post {
+    margin-bottom: 80px;
+  }
+  
+  .blog-post h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .blog-post img {
+    width: 50%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .blog-post p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .main-page {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;  /* Adjust text color to be visible against the background */
+  }
+  
+  /* Add additional styling as needed */
+  
+  /* Add any additional styling you need for your project */
+  
+  /* * {
+    background-color: #6961b1;
+} */
+
+/* #heading {
+    color: rgb(0, 0, 0);
+    font-family: Marker Felt, fantasy;
+    text-align: center;
+}
+
+.qna {
+    border-style: solid;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+} */
+
+
+/* MainPage.css */
+
+.header {
+ 
+  padding: 10px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end; /* Align links to the top right */
+}
+
+.icon-button {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 40px; /* Add some spacing between the links */
+}
+
+.icon-button span {
+  margin-top: 5px;
+  font-size: 15px;
+}
+
+.main-photo {
+  width: 100%; /* Make the photo fill the width of the container */
+  max-height: 400px; /* Set a maximum height for the photo */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.next-button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+}
+/* Add more styles as needed */
+
+.footer {
+  background-color:none ;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+
+.button1 {
+  
+  border: none;
+ 
+}
+
+/* .button1:hover {
+  background-color: #45a049;
+} */
+
+/* srikar css */
+/* 
+.profile-button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button2 {
+  width: 100px;
+  padding: 10px;
+  margin-right: 60px;
+  border: none;
+  border-radius: 20px;
+  background-color: gold;
+  color: black;
+  cursor: pointer;
+  align-items: center;
+} */
+
+.button1 img {
+  width: 80px; /* Adjust the width as needed */
+  height: 80px; /* Adjust the height as needed */
+  margin-right: 5px; /* Optional: Add some margin to the right of the image */
+  border-radius: 50%;
+}
+
+
+
+
+.gradient-background {
+  background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }   
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.icon-square {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+}
+
+.profile-img {
+  border-radius: 50%;
+  height: 100px;
+}
+
+
+
+
+
+/* click me css */
+
+.btn-12{
+  position: relative;
+  right: 20px;
+  bottom: 20px;
+  border:none;
+  box-shadow: none;
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  -webkit-perspective: 230px;
+  perspective: 230px;
+}
+.btn-12 span {
+  background: rgb(0,172,238);
+background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+  display: block;
+  position: absolute;
+  width: 130px;
+  height: 40px;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  border-radius: 5px;
+  margin:0;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.btn-12 span:nth-child(1) {
+  box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-12 span:nth-child(2) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-12:hover span:nth-child(1) {
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+.btn-12:hover span:nth-child(2) {
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+ color: transparent;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+}
+
+/* logo css */
+
+.logo {
+  font-size: 32px; /* Adjust the font size as needed */
+  color: #ffffff; /* Set the color of the logo */
+  display: flex;
+  align-items: center; /* Align the logo vertically */
+  text-decoration: none; /* Remove default text decoration */
+  padding-right: 35%;
+}
+
+.logo img {
+  width: 50px; /* Adjust the width of the logo image */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Add some space between the logo and text */
+  border-radius: 50%;
+}
+
+
+.logo1 {
+  font-size: 32px; /* Adjust the font size as needed */
+  color: #ffffff; /* Set the color of the logo */
+  display: flex;
+  align-items: center; /* Align the logo vertically */
+  text-decoration: none; /* Remove default text decoration */
+  padding-right: 65%;
+}
+
+.logo1 img {
+  width: 50px; /* Adjust the width of the logo image */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Add some space between the logo and text */
+  border-radius: 50%;
+}
+
+
+.custom-card-background {
+  background-color: pink; /* Replace with the desired background color */
+}
+.match-fixed-buttons{
+  background-color:bisque;
+}
+
+.card-back{
+  background-color: #FFF8DC;
+}
+
+.faq{
+  background-color: pink;
+}
